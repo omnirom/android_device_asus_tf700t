@@ -194,12 +194,12 @@
     <string name="config_deviceKeyHandlerClass" translatable="false">
         com.cyanogenmod.asusdec.KeyHandler</string>-->
 
-    <bool name="config_screenOffAnimation">false</bool>
+    <!--<bool name="config_screenOffAnimation">false</bool>-->
 
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
 
-    <bool name="config_hasRemovableLid">true</bool>
+    <!--<bool name="config_hasRemovableLid">true</bool>-->
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -207,7 +207,7 @@
     <!-- Maximum wallpaper width for devices with very high-res screen (1920x1200)
          the wallpaper width suggestion by the launcher may be too large for
          the GPU to handle. -->
-    <integer name="config_wallpaperMaxWidth">2048</integer>
+    <!--<integer name="config_wallpaperMaxWidth">2048</integer>-->
 
 
     <bool name="config_showNavigationBar">true</bool>
@@ -217,7 +217,7 @@
     <bool name="config_cellBroadcastAppLinks">false</bool>
 
     <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
+    <!--<bool name="config_enableTorch">true</bool>-->
 
     <!-- Defines the system property to set for performance profile xe: sys.cpu.modes. Leave it
          blank if the device do not support performance profiles -->
