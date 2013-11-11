@@ -87,7 +87,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 # Build kernel from source
 TARGET_KERNEL_SOURCE := kernel/asus/tf700t
-TARGET_KERNEL_CONFIG := cyanogenmod_cardhu_defconfig
+TARGET_KERNEL_CONFIG := omnirom_cardhu_defconfig
 
 # Custom Tools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf700t/releasetools/tf700t_ota_from_target_files
@@ -100,6 +100,28 @@ BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
 RECOVERY_FSTAB_VERSION := 2
 BOARD_RECOVERY_SWIPE := true
+
+#twrp
+DEVICE_RESOLUTION := 1920x1200
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_NO_USB_STORAGE := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_NO_REBOOT_RECOVERY := true
+
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
+
+TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p8"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "journal_async_commit,data=writeback,nodelalloc"
+TW_CRYPTO_FS_FLAGS := "0x00000406"
+TW_CRYPTO_KEY_LOC := "footer"
+TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf700t/recovery/hardwarekeyboard.cpp
 
 # SELINUX Defines
 BOARD_SEPOLICY_DIRS := \

@@ -29,6 +29,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.cardhu.usb.rc:root/init.cardhu.usb.rc \
     $(LOCAL_PATH)/ramdisk/init.cardhu.cpu.rc:root/init.cardhu.cpu.rc \
     $(LOCAL_PATH)/ramdisk/fstab.cardhu:root/fstab.cardhu \
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_PATH)/recovery/init.recovery.cardhu.rc:root/init.recovery.cardhu.rc
 
 # Prebuilt configuration files
