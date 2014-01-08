@@ -200,7 +200,7 @@
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
 
-    <!--<bool name="config_hasRemovableLid">true</bool>-->
+    <bool name="config_hasRemovableLid">true</bool>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -223,15 +223,7 @@
     <!-- Device supports LED flashlight -->
     <!--<bool name="config_enableTorch">true</bool>-->
 
-    <!-- Defines the system property to set for performance profile xe: sys.cpu.modes. Leave it
-         blank if the device do not support performance profiles -->
-    <string name="config_perf_profile_prop" translatable="false">sys.cpu.mode</string>
 
-    <!-- When config_perf_profile_prop is defined, this value MUST be the index of
-         one of the listes values in frameworks/base/core/res/res/values/cm_arrays.xml
-         for "perf_profile_values" array. Leave it blank if the device do not support
-         performance profiles  -->
-    <string name="config_perf_profile_default_entry" translatable="false">1</string>
 
     <!-- Enable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
