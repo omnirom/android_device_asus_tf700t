@@ -98,6 +98,8 @@ TARGET_KERNEL_CONFIG := omnirom_cardhu_defconfig
 # Custom Tools
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf700t/releasetools/tf700t_ota_from_target_files
 
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+
 # Recovery Options
 BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf700t/recovery/recovery.mk
 BOARD_HAS_NO_SELECT_BUTTON := true
