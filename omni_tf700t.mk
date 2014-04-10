@@ -16,25 +16,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
+
+# Low-FPS Bootanimation
+USE_LOWFPS_BOOTANI := true
 
 # Inherit from those products. Most specific first.
 
 $(call inherit-product, device/asus/tf700t/device_tf700t.mk)
 
+# Configure as xhdpi device to prevent breaking without mdpi drawables
+PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-
-
-#
-# Setup device specific product configuration.
-#
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+# Discard inherited values and use our own instead.
 PRODUCT_NAME := omni_tf700t
-PRODUCT_BRAND := asus
 PRODUCT_DEVICE := tf700t
-PRODUCT_MODEL := ASUS Transformer Pad TF700T
-PRODUCT_MANUFACTURER := asus
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=EeePad BUILD_FINGERPRINT=asus/US_epad/EeePad:4.2.1/JOP40D/US_epad-10.6.1.14.10-20130801:user/release-keys PRIVATE_BUILD_DESC="US_epad-user 4.2.1 JOP40D US_epad-10.6.1.14.10-20130801 release-keys"
-
-# Release name and versioning
-PRODUCT_RELEASE_NAME := TF700T
+PRODUCT_BRAND := Asus
+PRODUCT_MODEL := TF700T
