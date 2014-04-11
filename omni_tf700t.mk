@@ -22,7 +22,6 @@ $(call inherit-product, vendor/omni/config/common_tablet.mk)
 USE_LOWFPS_BOOTANI := true
 
 # Inherit from those products. Most specific first.
-
 $(call inherit-product, device/asus/tf700t/device_tf700t.mk)
 
 # Configure as xhdpi device to prevent breaking without mdpi drawables

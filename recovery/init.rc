@@ -1,5 +1,3 @@
-import /init.recovery.cardhu.rc
-
 on early-init
     start ueventd
 

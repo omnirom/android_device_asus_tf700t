@@ -1,6 +1,7 @@
 #
 # system.prop for tf700t
 #
+ro.build.selinux=1
 ro.carrier=wifi-only
 ro.sf.lcd_density=240
 ro.epad.model=TF700T
