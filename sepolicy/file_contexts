@@ -26,3 +26,7 @@
 
 # Hardware tunables
 /sys/class/graphics/fb0/device/smartdimmer/enable        u:object_r:sysfs_writable:s0
+
+# Audio
+/dev/tegra_audio_avpchannel u:object_r:audio_device:s0
+/dev/tegra_avpchannel u:object_r:audio_device:s0

@@ -15,6 +15,7 @@
 #
 
 # Audio Options
+BOARD_USES_ALSA_AUDIO := false
 BOARD_USES_GENERIC_AUDIO := false
 USE_CAMERA_STUB := false
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
@@ -54,10 +55,13 @@ TARGET_CPU_VARIANT := cortex-a9
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 ARCH_ARM_HAVE_TLS_REGISTER := true
-#ARCH_ARM_USE_NON_NEON_MEMCPY := true
+ARCH_ARM_USE_NON_NEON_MEMCPY := true
 ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 NEED_WORKAROUND_CORTEX_A9_745320 := true
-ARCH_ARM_HIGH_OPTIMIZATION := true
+
+# Optimization build flags
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 
 # Boot/Recovery image settings
 BOARD_KERNEL_CMDLINE :=
@@ -68,7 +72,6 @@ BOARD_KERNEL_PAGESIZE :=
 BOARD_EGL_CFG := device/asus/tf700t/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
-BOARD_USES_HWCOMPOSER := true
 BOARD_HAVE_PIXEL_FORMAT_INFO := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true

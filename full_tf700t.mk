@@ -17,7 +17,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Configure as xhdpi device to prevent breaking without mdpi drawables
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf700t
