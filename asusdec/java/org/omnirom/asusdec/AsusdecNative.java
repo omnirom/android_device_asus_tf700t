@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The Android Open Source Project
+ * Copyright (C) 2012 The omnirom Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,26 @@
  * limitations under the License.
  */
 
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
+package org.omnirom.asusdec;
 
-#define BTM_DEF_LOCAL_NAME "ASUS Transformer Pad"
+import android.util.Log;
 
-// Networking, Capturing, Object Transfer
-// MAJOR CLASS: COMPUTER
-// MINOR CLASS: PALM SIZE PC/PDA
-#define BTA_DM_COD {0x1A, 0x01, 0x14}
+public final class AsusdecNative {
 
-#define BTIF_HF_SERVICES (BTA_HSP_SERVICE_MASK)
-#define BTIF_HF_SERVICE_NAMES  { BTIF_HSAG_SERVICE_NAME, NULL }
-#define BLE_INCLUDED FALSE
-#define BTA_GATT_INCLUDED FALSE
-#define SMP_INCLUDED FALSE
-#define PAN_NAP_DISABLED TRUE
+    private static final String TAG = "AsusdecNative";
 
-#endif
+    private static final boolean DEBUG = false;
+
+    private static boolean sLoaded = false;
+
+    public static synchronized void loadAsusdecLib() {
+        if (!sLoaded) {
+            System.loadLibrary("asusdec_jni");
+            sLoaded = true;
+            if (DEBUG) {
+                Log.i(TAG, "Asusdec native library loaded");
+            }
+        }
+    }
+
+}
