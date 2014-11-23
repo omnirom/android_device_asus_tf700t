@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open Source Project
+# Copyright 2013 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,5 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-add_lunch_combo full_tf700t-userdebug
-add_lunch_combo omni_tf700t-userdebug
+$(call inherit-product, device/asus/grouper/full_tf700t.mk)
+
+PRODUCT_NAME := aosp_tf700t
