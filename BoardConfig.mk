@@ -96,8 +96,8 @@ TARGET_KERNEL_CONFIG := omni_tf300t_defconfig
 # Prebuilt Kernel Fallback
 #TARGET_PREBUILT_KERNEL := device/asus/tf700t/kernel
 
-# Custom Tools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf700t/releasetools/tf700t_ota_from_target_files
+# Allow overriding partition for boot image
+TARGET_RELEASETOOL_OTA_FROM_TARGET_ADDITIONAL_ARGS := --override_boot_partition=/staging
 
 # SELinux policies
 #BOARD_SEPOLICY_DIRS := \
