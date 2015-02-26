@@ -128,7 +128,7 @@ BOARD_HARDWARE_CLASS := device/asus/tf700t/cmhw/
 
 # TWRP
 BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf700t/recovery/recovery.mk
-TARGET_RECOVERY_FSTAB := device/asus/tf300t/ramdisk/fstab.cardhu
+TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_USERIMAGES_USE_F2FS := true
