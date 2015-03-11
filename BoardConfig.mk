@@ -91,7 +91,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 # Try to build the kernel
 TARGET_KERNEL_SOURCE := kernel/asus/tf300t
-TARGET_KERNEL_CONFIG := omni_tf300t_defconfig
+TARGET_KERNEL_CONFIG := tf300t_cm10_defconfig
 
 # Prebuilt Kernel Fallback
 #TARGET_PREBUILT_KERNEL := device/asus/tf700t/kernel
@@ -142,7 +142,7 @@ TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
 
 
 #TWRP
-DEVICE_RESOLUTION := 1200x1920
+DEVICE_RESOLUTION := 1920x1200
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_NO_USB_STORAGE := true
