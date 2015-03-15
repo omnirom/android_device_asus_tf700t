@@ -2,7 +2,7 @@
   {
    "repository":  "android_kernel_asus_tf300t",
    "target_path": "kernel/asus/tf300t",
-   "revision":    "android-5.0"
+   "revision":    "android-5.1"
  },
  {
    "remote":      "omnirom",
