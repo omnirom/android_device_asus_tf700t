@@ -2,7 +2,6 @@ bin/bdaddrwriter
 bin/glgps
 bin/pppd_btdun
 bin/rild
-bin/rm_ts_server
 bin/sensors-config
 bin/tf_daemon
 bin/touch_fw_update
