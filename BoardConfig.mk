@@ -137,12 +137,12 @@ MALLOC_IMPL := dlmalloc
 BOARD_HARDWARE_CLASS := device/asus/tf700t/cmhw/
 
 # TWRP
+TW_THEME := landscape_hdpi
 BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf700t/recovery/recovery.mk
 TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_USERIMAGES_USE_F2FS := true
-DEVICE_RESOLUTION := 1920x1200
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_NO_USB_STORAGE := true
