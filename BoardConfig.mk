@@ -95,7 +95,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Build the kernel inline
 TARGET_KERNEL_SOURCE := kernel/asus/tf300t
-TARGET_KERNEL_CONFIG := omni_tf300t_defconfig
+TARGET_KERNEL_CONFIG := omni_tf700t_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
 # Allow overriding partition for boot image
