@@ -96,7 +96,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Build the kernel inline
 TARGET_KERNEL_SOURCE := kernel/asus/tf300t
 TARGET_KERNEL_CONFIG := omni_tf700t_defconfig
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(strip $(HOST_OS))-x86/arm/arm-eabi-4.7/bin/"
 
 # Allow overriding partition for boot image
 TARGET_RELEASETOOL_OTA_FROM_TARGET_ADDITIONAL_ARGS := --override_boot_partition=/staging
